@@ -21,18 +21,19 @@ https://services2.arcgis.com/18ajPSI0b3ppsmMt/arcgis/rest/services/traffic_light
 - recall_score： calculates recall
 - roc_auc_score: 
 
-## 交通事故预测
+## Traffic Accident Prediction
 
-#### 收集数据
-- Data from gov of 维州
+#### Data Collection
+- Data from gov of Victoria
 - get weather from http://api.weather.com to get history weather data
 
-#### 整理数据
-- 整理每件交通事故发生地，对应的天气情况，路面信息，驾驶员信息，车辆信息等进行训练 y为1
-- 模拟出不同时间，不同地点，相同的条件，不发生事故的点，y为0
+#### Data Processing
+- Feature includes accidents location, weather condition, road infrastructure, car and driver information. when accident happen, y = 1
+- Simulate the datasets for the situations that accidents not happen in all conditions, y = 0
 
-#### 训练数据
-- 使用tensorflow进行training，得到的结果不是很好
-- 使用xgboost进行training，得到的结果可以
 
-#### 训练结果总体并没有达到目标，数据量太小，数据的准确性不够。
+#### Data Training
+- Using Tensorflow to train, the result isn't good enough 
+- Using XGboost, the result better.
+
+#### On the whole, the result is not so good, because the training data set too small and the accuracy of the datasets need to be improved.
