@@ -1,0 +1,9 @@
+.ipynb_*
+.log
+*.out
+.idea/
+*.json
+final_data.csv
+test.csv
+*.pkl
+
